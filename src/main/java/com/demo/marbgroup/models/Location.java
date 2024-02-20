@@ -12,7 +12,7 @@ public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String location;
+    private String address;
 
     @OneToMany(mappedBy = "location", cascade = CascadeType.ALL)
     private List<LivingHome> livingHome;

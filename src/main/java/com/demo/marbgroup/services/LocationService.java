@@ -18,6 +18,6 @@ public class LocationService {
     }
 
     public List<Location> getByLocation(LivingHomeLocationRequestDto livingHomeLocationRequestDto){
-        return locationRepository.findByLocation(livingHomeLocationRequestDto.getLocation());
+        return locationRepository.findByAddress(livingHomeLocationRequestDto.getLocation());
     }
 }
