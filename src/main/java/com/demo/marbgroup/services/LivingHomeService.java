@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import java.util.List;
 
 @Service
@@ -17,10 +18,11 @@ public class LivingHomeService {
     @Autowired
     private LivingHomeRepository livingHomeRepository;
 
-    @Autowired
-    private LivingHome livingHome;
+
+
 
     public Boolean saveNewLivingHome(LivingHomeRequestDto livingHomeRequestDto){
+        LivingHome livingHome = new LivingHome();
         livingHome.setName(livingHomeRequestDto.getName());
         livingHome.setLocation(livingHomeRequestDto.getLocation());
         livingHome.setServices(livingHomeRequestDto.getServices());
@@ -28,6 +30,10 @@ public class LivingHomeService {
 
         livingHomeRepository.save(livingHome);
         return true;
+    }
+
+    public List<LivingHome> getAllLivingHome(){
+        return livingHomeRepository.findAll();
     }
 
     public List<LivingHome> getLivingHomesByLocation(LivingHomeLocationRequestDto livingHomeLocationRequestDto){

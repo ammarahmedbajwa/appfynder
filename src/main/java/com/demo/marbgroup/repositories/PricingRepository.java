@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PricingRepository extends JpaRepository<Pricing, Long> {
-    Pricing findByLivingHomeName(String livingHomeName);
+//    Pricing findByLivingHomeName(String livingHomeName);
 }

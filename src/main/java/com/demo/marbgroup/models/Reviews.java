@@ -1,5 +1,6 @@
 package com.demo.marbgroup.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -15,6 +16,7 @@ public class Reviews {
     private int rating;
 
     //living home id to be added here
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "livingHome_id")
     private LivingHome livingHome;

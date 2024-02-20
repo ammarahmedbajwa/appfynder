@@ -1,5 +1,6 @@
 package com.demo.marbgroup.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -15,6 +16,7 @@ public class Services {
     private Long id;
     private String name;
 
+    @JsonIgnore
     @ManyToMany
     @JoinTable(name = "livingHome_services",
     joinColumns = @JoinColumn(name = "services_id"),
