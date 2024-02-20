@@ -31,10 +31,10 @@ public class LivingHomeService {
     }
 
     public List<LivingHome> getLivingHomesByLocation(LivingHomeLocationRequestDto livingHomeLocationRequestDto){
-        return livingHomeRepository.findByLocationName(livingHomeLocationRequestDto.getLocation());
+        return livingHomeRepository.findByLocation(livingHomeLocationRequestDto.getLocation());
     }
 
     public List<LivingHome> getLivingHomeByServices(LivingHomeServicesRequestDto livingHomeServicesRequestDto){
-        return livingHomeRepository.findByServiceName(livingHomeServicesRequestDto.getService());
+        return livingHomeRepository.findByServices(livingHomeServicesRequestDto.getService());
     };
 }

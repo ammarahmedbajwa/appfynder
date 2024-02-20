@@ -8,7 +8,7 @@ import java.util.List;
 
 @Repository
 public interface LivingHomeRepository extends JpaRepository<LivingHome, Long> {
-    List<LivingHome> findByLocationName(String location);
+    List<LivingHome> findByLocation(String location);
 
-    List<LivingHome> findByServiceName(String service);
+    List<LivingHome> findByServices(String service);
 }
