@@ -5,12 +5,14 @@ import com.demo.marbgroup.dtos.requests.LivingHomeRequestDto;
 import com.demo.marbgroup.dtos.requests.LivingHomeServicesRequestDto;
 import com.demo.marbgroup.models.LivingHome;
 import com.demo.marbgroup.repositories.LivingHomeRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class LivingHomeService {
     @Autowired
     private LivingHomeRepository livingHomeRepository;
